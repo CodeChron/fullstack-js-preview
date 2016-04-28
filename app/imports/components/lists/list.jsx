@@ -12,9 +12,7 @@ export const List = (props) =>{
  	  }
 	}
 
-	const displayFeature = (shouldDisplay, feature, args ) => {
-	  return shouldDisplay? feature(args) : null
-	}
+	const displayFeature = (shouldDisplay, feature, args ) => shouldDisplay? feature(args) : null
 
  const listFeatures = {
   	addItem: () => <li><SingleFieldSubmit {...props} /></li>,
@@ -36,7 +34,7 @@ export const List = (props) =>{
 List.propTypes = {
 	collection: React.PropTypes.array.isRequired,
 	addItem: React.PropTypes.bool,
-	deleteItem:  React.PropTypes.bool
+	deleteItem:  React.PropTypes.bool,
 }
 List.defaultProps = {
 	addItem: false,
