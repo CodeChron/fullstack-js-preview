@@ -1,0 +1,14 @@
+// CORE
+// Here we'll add base files that are not specific to any design and which support other files
+@import "core/normalize";
+
+
+// LAYOUTS
+// We'll likely have multiple layouts, such as the overall app layout, a centered layout for a login view and more.
+@import "layouts/_full_screen_layout";
+
+//COMPONENTS
+// styles generally corresponding to our UI components
+
+//THEME
+// color palette, typography, etc.

@@ -1,0 +1,37 @@
+//apply a natural box layout model to all elements, but allowing components to change - http://www.paulirish.com/2012/box-sizing-border-box-ftw/;
+html,body {
+  box-sizing: border-box;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+ 
+html {
+  // the parent of body must be set to full height for body to be full height
+  height: 100%;
+
+}
+
+body {
+  // min-height is needed for pages that might scroll, ie they may contain _more_ than 100% of viewport height
+  min-height: 100%;
+}
+
+
+#app-container {
+
+  //allow for a child block to set to full height using flexbox
+  display: flex;
+  flex-direction: column;
+
+   //force a full height block
+  min-height: 100vh;
+
+  //Center the app container
+  margin: 0 auto;
+
+}
+
+#app-header, #main-content {
+  padding: 1em
+}
+
