@@ -1,9 +1,10 @@
 import { createContainer } from 'meteor/react-meteor-data'
 import { Notes } from '../../api/notes/notes'
 import { List } from '../lists/list'
+import { Table } from '../tables/table'
 
-// This can only be used for a single layout, the one pass in as the second argument.  What if we want to use the same container methods for multiple
-export default createContainer(() => {
+//Here, we create a new function that returns the container with the layout we passed in
+const noteContainer = (layout) => createContainer(() => {
 
 	const notes = Notes.find({}, { sort: { updatedAt: -1 }}).fetch()
 	
@@ -24,7 +25,12 @@ export default createContainer(() => {
 	  collection: notes,
 	  handleDelete: handleDelete,
 	  addItem: false,
-	  deleteItem: false
+	  deleteItem: true
   }
+}, layout)
 
-}, List)
+const NotesList    = noteContainer(List)
+const NotesTable = noteContainer(Table)
+
+export { NotesList, NotesTable }
+
