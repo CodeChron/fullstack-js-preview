@@ -5,8 +5,8 @@ import { List } from '../lists/list'
 export default createContainer(() => {
 
 	const notes = Notes.find({}, { sort: { updatedAt: -1 }}).fetch()
-	
-	const handleCreateNote = (content) => {
+
+	const handleCreate = (content) => {
 		Notes.insert({ 
 			content:content,
 			updatedAt: new Date() 
@@ -18,7 +18,7 @@ export default createContainer(() => {
 	}
 
   return {
-  	handleSubmit: handleCreateNote,
+  	handleSubmit: handleCreate,
 	  placeholder: "New Note",
 	  collection: notes,
 	  handleDelete: handleDelete,
