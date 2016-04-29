@@ -22,15 +22,16 @@ export class SingleFieldSubmit extends React.Component {
   }
 
   render() {
-      return <form onSubmit={this.handleSubmit} className="full-width invisible-field">
+      return <form className="form-inline" onSubmit={this.handleSubmit}>
+       <div className="form-group">
         <input
           type="text"
-          className="full-width text-input"
+          className="form-control"
           placeholder={this.props.placeholder}
           value={this.state.inputValue}
           onChange={this.updateInputValue}
         />
-         <input type="submit" style={{display:'none'}} />
+        </div>
       </form>
   }
 }
