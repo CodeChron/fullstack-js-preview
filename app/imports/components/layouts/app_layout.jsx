@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const AppLayout = () =>
-  <div id="app-container">
+  <div id="app-container" className="container">
     <div id="main-content">
       React placeholder
     </div>
