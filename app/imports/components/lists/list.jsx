@@ -1,5 +1,5 @@
 import React from 'react'
-import { Btn } from '../buttons/btn'
+import { IconBtn } from '../buttons/icon_btn'
 import { SingleFieldSubmit } from '../forms/single_field_submit'
 
 export const List = (props) =>{
@@ -16,7 +16,7 @@ export const List = (props) =>{
 	    <li className="list-group-item"><SingleFieldSubmit {...props} /></li>
 	    { 
 	    	props.collection.map((item) => {
-	 	      return <li key={item._id} className="list-group-item">{item.content} <Btn label={"x"}  handleClick={()=> handleDelete(item)} /></li>
+	 	      return <li key={item._id} className="list-group-item">{item.content} <span className="pull-right"><IconBtn title={"Delete"} icon={"glyphicon glyphicon-remove"}  handleClick={()=> handleDelete(item)} /></span></li>
 	      })
 	    }
   </ul>
