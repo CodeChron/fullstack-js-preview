@@ -12,11 +12,11 @@ export const List = (props) =>{
  	  }
 	}
 
-	return <ul>
-	    <li><SingleFieldSubmit {...props} /></li>
+	return <ul className="list-group">
+	    <li className="list-group-item"><SingleFieldSubmit {...props} /></li>
 	    { 
 	    	props.collection.map((item) => {
-	 	      return <li key={item._id}>{item.content} <Btn label={"x"}  handleClick={()=> handleDelete(item)} /></li>
+	 	      return <li key={item._id} className="list-group-item">{item.content} <Btn label={"x"}  handleClick={()=> handleDelete(item)} /></li>
 	      })
 	    }
   </ul>

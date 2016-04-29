@@ -1,11 +1,14 @@
 import React from 'react'
 
 export const AppHeaderLayout = (props) =>
-  <div id="app-header">
-	<div className="header-center">
-      <h1 className="page-title">{props.pageTitle}</h1>
-	</div>
-  </div>
+<nav className="navbar navbar-default">
+  <div className="container">
+    <div className="navbar-header">
+      <h1 className="navbar-brand">{props.pageTitle}</h1>
+    </div>
+ </div>
+</nav>
+
 
 AppHeaderLayout.propTypes = {
   pageTitle: React.PropTypes.string

@@ -5,7 +5,7 @@ import NotesContainer from '../containers/notes_container'
 export const AppLayout = () =>
   <div id="app-container">
     <AppHeaderLayout />
-    <div id="main-content">
+    <div id="main-content" className="container">
       <NotesContainer />
     </div>
   </div>
