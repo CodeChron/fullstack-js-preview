@@ -23,7 +23,7 @@ export class SingleFieldSubmit extends React.Component {
 
   render() {
       return <form className="form-inline" onSubmit={this.handleSubmit}>
-               <input
+              <input
                 type="text"
                 className="form-control"
                 placeholder={this.props.placeholder}
