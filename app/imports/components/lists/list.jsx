@@ -1,5 +1,4 @@
 import React from 'react'
-import { IconBtn } from '../buttons/icon_btn'
 import { DeleteBtn } from '../buttons/delete_btn'
 import { SingleFieldSubmit } from '../forms/single_field_submit'
 
