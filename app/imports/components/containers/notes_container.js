@@ -21,7 +21,7 @@ export default createContainer(() => {
   	handleSubmit: handleCreate,
 	  placeholder: "New Note",
 	  collection: notes,
-	  handleDelete: handleDelete
+	  handleDelete
   }
 
 }, List)
