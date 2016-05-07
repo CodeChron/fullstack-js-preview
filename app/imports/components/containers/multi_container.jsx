@@ -30,7 +30,7 @@ const noteContainer = (layout) => createContainer(() => {
 }, layout)
 
 const NotesList    = noteContainer(List)
-const NotesTable = noteContainer(Table)
+const NotesTable   = noteContainer(Table)
 
 export { NotesList, NotesTable }
 
