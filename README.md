@@ -1,4 +1,4 @@
-# Fullstack JS Course Preview
+# Fullstack JS Workshop Preview
 
 This is a repo used for a tutorial on Full-Stack JS with Meteor and React.
 
