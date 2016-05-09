@@ -6,6 +6,15 @@ export const AppLayout = () =>
   <div id="app-container">
     <AppHeaderLayout />
     <div id="main-content" className="container">
-      <NotesContainer />
+      <NotesContainer>
+        <SingleFieldSubmit handleSubmit={props.handleSubmit} />
+      </NotesContainer>
     </div>
   </div>
+
+
+//The container model wraps a data handler around a component, conceptually the same as:
+
+// <NotesContainer>
+//   <SingleFieldSubmit handleSubmit={props.handleCreateNote} placeholder={"New Note"} />
+// </NotesContainer>

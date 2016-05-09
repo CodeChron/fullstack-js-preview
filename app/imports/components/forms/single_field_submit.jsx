@@ -3,15 +3,22 @@ import autoBind from 'react-autobind'
 
 export class SingleFieldSubmit extends React.Component {
 
+  //pass in props if needed in  the constructor
   constructor(props){
+
     super(props)
+    //Set initial component state in the constructor 
     this.state = {
       inputValue: this.props.inputValue
     }
+
+    //Automatically bind methods in the component to the current lexical 'this'
     autoBind(this)
   }
 
+  //es6 object function syntax
   updateInputValue(e){
+
     this.setState({inputValue: e.target.value})
   }
 
