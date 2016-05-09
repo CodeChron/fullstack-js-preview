@@ -6,9 +6,7 @@ export const AppLayout = () =>
   <div id="app-container">
     <AppHeaderLayout />
     <div id="main-content" className="container">
-      <NotesContainer>
-        <SingleFieldSubmit handleSubmit={props.handleSubmit} />
-      </NotesContainer>
+      <NotesContainer />
     </div>
   </div>
 
