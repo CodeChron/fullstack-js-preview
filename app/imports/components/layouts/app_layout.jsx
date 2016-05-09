@@ -1,3 +1,4 @@
+//This is ES6/ES2015 syntax, which Meteor transpiles (using Babel) out of the box
 import React from 'react'
 
 export const AppLayout = () =>
@@ -8,7 +9,7 @@ export const AppLayout = () =>
   </div>
 
 
-//The above is the same as:
+//The above would be the same as:
 // var AppLayout = function() {
 // 	return (
 //     React.createElement('div', {id: "app-container"},
