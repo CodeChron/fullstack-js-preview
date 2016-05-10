@@ -12,21 +12,25 @@ export const List = (props) =>{
  	  }
 	}
 
- const optionalFeatures = {
+ const listFeatures = {
   	addItem: () => <li className="list-group-item"><SingleFieldSubmit {...props} /></li>,
-  	deleteItem: (args) => <span className="pull-right"><DeleteBtn itemToDelete={args} {...props}/></span>
-	}
-
-	const displayOptionalFeature = (shouldDisplay, feature, args ) => {
-	  return shouldDisplay? feature(args) : null
+  	deleteItem: (args) => <span className="pull-right"><DeleteBtn itemToDelete={args} {...props}/></span>	
 	}
 	
 	return <ul className="list-group">
-	    {displayOptionalFeature(props.addItem, optionalFeatures.addItem)}
+	    {props.addItem?
+	    	listFeatures.addItem()
+	     :
+	      null
+	    }
 	    { 
 	    	props.collection.map((item) => {
 	 	      return <li key={item._id} className="list-group-item">{item.content} 
-        {displayOptionalFeature(props.deleteItem, optionalFeatures.deleteItem, item)}
+        	 	{props.deleteItem?
+	 	        	listFeatures.deleteItem(item)
+	 	         :
+	 	          null
+	 	        }
 	 	      </li>
 	      })
 	    }
