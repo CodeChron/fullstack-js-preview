@@ -9,7 +9,7 @@ export default createContainer(() => {
 	const handleCreate = (content) => {
 		Notes.insert({ 
 			content:content,
-			updatedAt: new Date() 
+			updatedAt: new Date()
 		})
 	}
 
